@@ -1,0 +1,1 @@
+DrawScript(100,100,"HI[color=0,0,255]HI[/color] JI");
