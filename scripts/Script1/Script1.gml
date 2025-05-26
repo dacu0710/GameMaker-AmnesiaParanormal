@@ -5,18 +5,13 @@
 /// @param {real} _x              텍스트 시작 X 좌표
 /// @param {real} _y              텍스트 시작 Y 좌표
 /// @param {string} _text         그릴 문자열 (예: "Hello [color=255,0,0]Red[/color] and [b]Bold[/b] World!\nNew Line.")
-/// @param {real} _default_r      기본 텍스트 색상 R (0-255)
-/// @param {real} _default_g      기본 텍스트 색상 G (0-255)
-/// @param {real} _default_b      기본 텍스트 색상 B (0-255)
-/// @param {real} _default_alpha  기본 텍스트 투명도 (0-1)
-/// @param {asset} _font_normal   기본/일반 스타일 폰트 리소스 (예: fnt_game_text)
-/// @param {asset} _font_bold     굵게 스타일 폰트 리소스 (예: fnt_game_text_bold)
 
 function DrawScript(_x, _y, _text)
 {
-
+	var _font_bold = bold_font
+	
     // 기본 폰트 및 색상 설정
-    //draw_set_font(_font_normal); // 항상 일반 폰트 사용
+    draw_set_font(font); // 항상 일반 폰트 사용
     draw_set_colour(make_color_rgb(255, 255, 255));
     //draw_set_alpha(_default_alpha);
     draw_set_halign(fa_left); // 리치 텍스트는 보통 왼쪽 정렬이 제어하기 쉬움
@@ -29,11 +24,11 @@ function DrawScript(_x, _y, _text)
     var _is_bold = false;
 
     // 현재 폰트와 색상 스택 (중첩 태그를 지원하기 위함)
-    //var _font_stack = ds_stack_create();
+    var _font_stack = ds_stack_create();
     var _color_stack = ds_stack_create();
 
     // 기본 폰트와 색상을 스택에 푸시
-    //ds_stack_push(_font_stack, _font_normal);
+	ds_stack_push(_font_stack, font);
     ds_stack_push(_color_stack, draw_get_colour());
 
     while (string_length(_text_remaining) > 0)
@@ -76,10 +71,10 @@ function DrawScript(_x, _y, _text)
         }
 
         // \n (줄 바꿈) 문자 찾기
-        var _newline_pos = string_pos("\n", _text_remaining);
+        var _newline_pos = string_pos("/n", _text_remaining);
         if (_newline_pos > 0 && _newline_pos < _next_tag_start) {
             _next_tag_start = _newline_pos;
-            _tag_name = "\n";
+            _tag_name = "/n";
             _tag_type = 5;
         }
 
@@ -125,16 +120,16 @@ function DrawScript(_x, _y, _text)
 
                 case 2: // [b]
                     _is_bold = true;
-                    //ds_stack_push(_font_stack, _font_bold); // 굵은 폰트 푸시
-                    //draw_set_font(_font_bold);
+                    ds_stack_push(_font_stack, _font_bold); // 굵은 폰트 푸시
+                    draw_set_font(_font_bold);
                     break;
 
                 case 4: // [/b]
                     _is_bold = false;
-                   // if (ds_stack_size(_font_stack) > 1) { // 기본 폰트는 팝하지 않음
-                    //    ds_stack_pop(_font_stack);
-                    //}
-                   // draw_set_font(ds_stack_top(_font_stack));
+                   if (ds_stack_size(_font_stack) > 1) { // 기본 폰트는 팝하지 않음
+                       ds_stack_pop(_font_stack);
+                    }
+                   draw_set_font(ds_stack_top(_font_stack));
                     break;
 
                 case 5: // \n (줄 바꿈)
@@ -145,12 +140,11 @@ function DrawScript(_x, _y, _text)
         }
         else // 더 이상 태그가 없으면 나머지 텍스트 그리기
         {
-            //draw_text(_current_x, _current_y, _text_remaining);
             _text_remaining = ""; // 루프 종료
         }
     }
 
     // 데이터 구조 정리
-    //ds_stack_destroy(_font_stack);
+    ds_stack_destroy(_font_stack);
     ds_stack_destroy(_color_stack);
 }

@@ -1,1 +1,1 @@
-DrawScript(100,100,"HI[color=0,0,255]HI[/color] JI");
+DrawScript(0,100,"테스트/n[color=255,0,255][b]테스트[/b][/color]/n");
