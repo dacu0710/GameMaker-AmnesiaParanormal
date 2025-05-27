@@ -1,7 +1,6 @@
 var KEY = keyboard_key;
 if (room == R_Title)
 {
-	show_debug_message(KEY)
 	switch(KEY)
 	{
 		case global.KeyBind.StartKey:
@@ -10,4 +9,11 @@ if (room == R_Title)
 		default:
 			break;
 	}	
+}
+if(room == R_Main)
+{
+	if(instance_exists(Obj_Player))
+	{
+		Obj_Player.PlayerKey(KEY)
+	}
 }
