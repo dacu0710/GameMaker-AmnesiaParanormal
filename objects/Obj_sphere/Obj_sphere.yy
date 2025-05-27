@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_sphere",
+    "path":"sprites/Spr_sphere/Spr_sphere.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

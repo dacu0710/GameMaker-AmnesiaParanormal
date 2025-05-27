@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_shellWall",
+    "path":"sprites/Spr_shellWall/Spr_shellWall.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

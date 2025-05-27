@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_injection",
+    "path":"sprites/Spr_injection/Spr_injection.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

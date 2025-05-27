@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_darkness",
+    "path":"sprites/Spr_darkness/Spr_darkness.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

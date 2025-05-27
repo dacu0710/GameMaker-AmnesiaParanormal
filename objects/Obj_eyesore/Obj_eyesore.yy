@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_eyesore",
+    "path":"sprites/Spr_eyesore/Spr_eyesore.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

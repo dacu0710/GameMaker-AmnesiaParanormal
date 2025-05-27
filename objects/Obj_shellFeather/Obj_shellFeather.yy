@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_shellFeather",
+    "path":"sprites/Spr_shellFeather/Spr_shellFeather.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

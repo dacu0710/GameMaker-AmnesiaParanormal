@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_cusp",
+    "path":"sprites/Spr_cusp/Spr_cusp.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

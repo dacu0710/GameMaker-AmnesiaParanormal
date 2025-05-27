@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_thorn",
+    "path":"sprites/Spr_thorn/Spr_thorn.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

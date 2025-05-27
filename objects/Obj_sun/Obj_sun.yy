@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_sun",
+    "path":"sprites/Spr_sun/Spr_sun.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

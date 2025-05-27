@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_lightLay",
+    "path":"sprites/Spr_lightLay/Spr_lightLay.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

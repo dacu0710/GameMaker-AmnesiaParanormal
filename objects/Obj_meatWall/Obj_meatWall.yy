@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_meatWall",
+    "path":"sprites/Spr_meatWall/Spr_meatWall.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
