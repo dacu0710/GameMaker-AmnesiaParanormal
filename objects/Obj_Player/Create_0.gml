@@ -2,11 +2,20 @@ Vertical = 0;
 Horizontal = 0;
 MoveForce = [Horizontal/100,Vertical/100];
 
-PlayerMaxSpeed = 4;
+PlayerMaxSpeed = 4;//*100 = vlaue
 PlayerDeltaSpeed = PlayerMaxSpeed*6;
+
+weaponLevel = 1;
+
+shootLv1Cooltime = 10;
+shootLv2Cooltime = 20;//유도
+shootLv3Cooltime = 20;//수류탄
+
+PlayerSize = [sprite_width,sprite_height];
 
 function PlayerKey(key)
 {
+	//move
 	if(keyboard_check(global.KeyBind.PlayerDownKey))
 	{
 		if(Vertical < PlayerMaxSpeed*100)
@@ -54,4 +63,33 @@ function PlayerKey(key)
 			Horizontal -= sign(Horizontal)*PlayerDeltaSpeed;
 		}		
 	}
+
+	//atk
+	
+	if(keyboard_check(global.KeyBind.ShootLV1Key))
+	{
+		if(alarm_get(0) == -1 and weaponLevel >= 1)
+		{
+			instance_create_layer(x,y,"Player",Obj_BaseBullet);
+			alarm_set(0,shootLv1Cooltime);
+		}
+	}
+	if(keyboard_check(global.KeyBind.ShootLV2Key))
+	{
+		if(alarm_get(1) == -1 and weaponLevel >= 1)//임시
+		{
+				instance_create_layer(x+PlayerSize[0],y,"Player",Obj_Guidedbullet);
+				instance_create_layer(x-PlayerSize[0],y,"Player",Obj_Guidedbullet);
+				instance_create_layer(x,y-PlayerSize[1],"Player",Obj_Guidedbullet);
+				alarm_set(1,shootLv2Cooltime);
+		}
+	}
+	if(keyboard_check(global.KeyBind.ShootLV3Key))
+	{
+		if(alarm_get(2) == -1 and weaponLevel >= 1)
+		{
+				alarm_set(2,shootLv3Cooltime);
+		}
+	}
+	
 }

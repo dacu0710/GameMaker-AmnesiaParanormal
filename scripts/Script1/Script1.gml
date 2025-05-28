@@ -148,3 +148,8 @@ function DrawScript(_x, _y, _text)
     ds_stack_destroy(_font_stack);
     ds_stack_destroy(_color_stack);
 }
+
+function ApplyBrightness()
+{
+	
+}
