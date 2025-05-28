@@ -1,1 +1,1 @@
-DrawScript(0,100,"테스트/n[color=255,0,255][b]테스트[/b][/color]/n");
+//DrawScript(0,100,"테스트/n[color=255,0,255][b]테스트[/b][/color]/n");

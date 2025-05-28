@@ -151,5 +151,10 @@ function DrawScript(_x, _y, _text)
 
 function ApplyBrightness()
 {
-	
+	var Bright = global.Bright;
+	var lasrBright = global.Bright - 1;
+	if(lasrBright != 0)
+	{
+		image_blend = make_color_hsv(0,255,Bright);
+	}
 }

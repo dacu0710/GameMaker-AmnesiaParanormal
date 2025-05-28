@@ -1,3 +1,5 @@
+global.step = 0;
+
 global.KeyBind = 
 {
 	StartKey : vk_space,
@@ -11,9 +13,9 @@ global.KeyBind =
 	
 }
 
-
-global.Bright = 100;
-global.BrightLevel = 1;
+global.Sanity = 100
+global.Bright = 20;
+global.BrightLevel = 2;
 
 instance_create_layer(0,0,"Manager",KeyManager);
 instance_create_layer(0,0,"Manager",GameManager);
