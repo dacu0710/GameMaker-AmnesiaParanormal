@@ -13,9 +13,9 @@ global.KeyBind =
 	
 }
 
-global.Sanity = 100
-global.Bright = 20;
-global.BrightLevel = 2;
+global.Sanity = 100;
+global.Bright = 100;
+global.BrightLevel = 1;
 
 instance_create_layer(0,0,"Manager",KeyManager);
 instance_create_layer(0,0,"Manager",GameManager);

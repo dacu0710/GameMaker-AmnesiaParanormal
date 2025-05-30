@@ -8,10 +8,16 @@ PlayerDeltaSpeed = PlayerMaxSpeed*6;
 weaponLevel = 1;
 
 shootLv1Cooltime = 10;
+Lv1BulletSize = 100;
 shootLv2Cooltime = 20;//유도
 shootLv3Cooltime = 20;//수류탄
 
+isDamaged = true;
+
 PlayerSize = [sprite_width,sprite_height];
+
+//정신력 in GeneralManager
+//global.Sanity = 100;
 
 function PlayerKey(key)
 {
@@ -21,7 +27,6 @@ function PlayerKey(key)
 		if(Vertical < PlayerMaxSpeed*100)
 		{
 			Vertical += PlayerDeltaSpeed;
-			show_debug_message(MoveForce);
 		}
 	}
 	if(keyboard_check(global.KeyBind.PlayerUPKey))
@@ -29,7 +34,6 @@ function PlayerKey(key)
 		if(Vertical > -PlayerMaxSpeed*100)
 		{
 			Vertical -= PlayerDeltaSpeed;
-			show_debug_message(MoveForce);
 		}
 	}
 	if(!keyboard_check(global.KeyBind.PlayerUPKey) and
@@ -65,12 +69,20 @@ function PlayerKey(key)
 	}
 
 	//atk
-	
 	if(keyboard_check(global.KeyBind.ShootLV1Key))
 	{
 		if(alarm_get(0) == -1 and weaponLevel >= 1)
 		{
 			instance_create_layer(x,y,"Player",Obj_BaseBullet);
+			Lv1BulletSize = max(25,Lv1BulletSize - 10);
+			alarm_set(0,shootLv1Cooltime);
+		}
+	} 
+	else 
+	{
+		if(alarm_get(0) == -1 and weaponLevel >= 1)
+		{
+			Lv1BulletSize = min(100,Lv1BulletSize + 10);
 			alarm_set(0,shootLv1Cooltime);
 		}
 	}
@@ -92,4 +104,12 @@ function PlayerKey(key)
 		}
 	}
 	
+}
+function TakeDamage(damage)
+{
+	if(!isDamaged)
+	{
+		global.Sanity -= damage;
+		isDamaged = true
+	}
 }

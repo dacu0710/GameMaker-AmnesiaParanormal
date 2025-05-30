@@ -6,3 +6,13 @@ if(room == R_Main)
 	x += MoveForce[0];
 	y += MoveForce[1];
 }
+
+if(isDamaged)
+{
+	if(alarm_get(3) == -1)
+	{
+		show_debug_message("0.3초")
+		
+		alarm_set(3,room_speed * 0.3)
+	}
+}
