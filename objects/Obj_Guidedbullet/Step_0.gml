@@ -7,6 +7,8 @@ if(room == R_Main)
 		{
 			instance_destroy();
 		}
+		
+		var _nearIns = instance_nearest(x,y,_element);
 	}
 	array_foreach(Enemys,_collider);
 	
