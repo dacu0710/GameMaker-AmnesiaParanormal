@@ -52,3 +52,7 @@ if(keyboard_check_released(ord("2")))
 {
 	global.Sanity -= 5;
 }
+if(keyboard_check_released(ord("3")))
+{
+	Obj_Player.isDamaged = true;
+}

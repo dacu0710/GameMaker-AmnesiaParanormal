@@ -12,7 +12,9 @@ Lv1BulletSize = 100;
 shootLv2Cooltime = 20;//유도
 shootLv3Cooltime = 20;//수류탄
 
-isDamaged = true;
+isDamaged = false;
+flash_timer = 0;
+flash_speed = 5;
 
 PlayerSize = [sprite_width,sprite_height];
 
@@ -73,7 +75,7 @@ function PlayerKey(key)
 	{
 		if(alarm_get(0) == -1 and weaponLevel >= 1)
 		{
-			instance_create_layer(x,y,"Player",Obj_BaseBullet);
+			instance_create_layer(x,y-PlayerSize[1],"Player",Obj_BaseBullet);
 			Lv1BulletSize = max(25,Lv1BulletSize - 10);
 			alarm_set(0,shootLv1Cooltime);
 		}
@@ -100,6 +102,7 @@ function PlayerKey(key)
 	{
 		if(alarm_get(2) == -1 and weaponLevel >= 1)
 		{
+				instance_create_layer(x,y-PlayerSize[1],"Player",Obj_GrenadeBullet);
 				alarm_set(2,shootLv3Cooltime);
 		}
 	}
