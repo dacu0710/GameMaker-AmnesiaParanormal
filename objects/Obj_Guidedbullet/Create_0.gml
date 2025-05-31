@@ -1,4 +1,4 @@
-UIBulletSpeed = 8;
+BulletSpeed = 8;
 
 MoveForce = [0,-BulletSpeed];
 Enemys = [
