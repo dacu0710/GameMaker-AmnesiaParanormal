@@ -19,3 +19,4 @@ global.BrightLevel = 1;
 
 instance_create_layer(0,0,"Manager",KeyManager);
 instance_create_layer(0,0,"Manager",GameManager);
+instance_create_layer(0,0,"Manager",UIManager);
