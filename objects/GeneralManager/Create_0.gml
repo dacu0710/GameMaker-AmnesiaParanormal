@@ -11,11 +11,15 @@ global.KeyBind =
 	ShootLV2Key : ord( "X" ), //유도탄
 	ShootLV3Key : ord( "C" ), //수류탄
 	
+	GamePauseKey : vk_escape
+	
 }
 
 global.Sanity = 100;
 global.Bright = 100;
 global.BrightLevel = 1;
+
+global.isPause = false;
 
 randomize();
 
