@@ -5,7 +5,7 @@ if(y >= 448)
 {
 	for(i = 0;i<8;i++)
 	{
-		var t = instance_create_layer(x,y,"monster",Obj_eye_thorn);
+		var t = instance_create_layer(x,y,"Monster",Obj_eye_thorn);
 		t.i = i;
 	}
 	i = 0;
