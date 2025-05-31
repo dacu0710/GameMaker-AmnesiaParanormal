@@ -108,11 +108,25 @@ function PlayerKey(key)
 	}
 	
 }
-function TakeDamage(damage)
+
+/// @function TakeDamage
+/// @description 플레이어 데미지 넣기
+/// @param {real} _damage 플레이어가 입을 데미지
+function TakeDamage(_damage)
 {
 	if(!isDamaged)
 	{
-		global.Sanity -= damage;
+		global.Sanity -= _damage;
 		isDamaged = true
+	}
+}
+/// @function addForce
+/// @description 플레이어 이동 힘 추가
+/// @param {array} _ForceVec 추가할 힘
+function addForce(_ForceVec)
+{
+	if(array_length(_ForceVec) == 2)
+	{
+		MoveForce = _ForceVec;
 	}
 }
