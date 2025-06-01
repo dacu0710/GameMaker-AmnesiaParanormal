@@ -1,3 +1,5 @@
+Damage = 20;
+
 random_x = 0;
 random_y = 0;
 i = 0;

@@ -25,3 +25,19 @@ else
 {
     image_alpha = 1;
 }
+
+//충돌 판정
+var _collider = function(_element, _index)
+{
+	if(place_meeting(x,y,_element))
+	{
+		var _instance = instance_nearest(x,y,_element);
+		if(variable_instance_exists(_instance,"Damage"))
+		{
+			TakeDamage(_instance.Damage);
+		}
+		show_debug_message("{0} 부딧침",_instance);
+	}
+	
+}
+array_foreach(Enemys,_collider);

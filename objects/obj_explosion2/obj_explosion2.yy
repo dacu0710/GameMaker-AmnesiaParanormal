@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_explosion2_1",
-    "path":"sprites/spr_explosion2_1/spr_explosion2_1.yy",
+    "name":"spr_explosion_big",
+    "path":"sprites/spr_explosion_big/spr_explosion_big.yy",
   },
   "spriteMaskId":null,
   "visible":true,
