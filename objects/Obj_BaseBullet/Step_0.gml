@@ -5,7 +5,7 @@ if(room == R_Main)
 	{
 		if(place_meeting(x+MoveForce[0],y+MoveForce[1],_element))
 		{
-			instance_destroy();
+			//instance_destroy();
 		}
 	}
 	array_foreach(Enemys,_collider);
