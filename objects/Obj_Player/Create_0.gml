@@ -124,6 +124,7 @@ function TakeDamage(_damage)
 		isDamaged = true
 	}
 }
+
 /// @function addForce
 /// @description 플레이어 이동 힘 추가
 /// @param {array} _ForceVec 추가할 힘

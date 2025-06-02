@@ -13,13 +13,15 @@ if(room == R_Main)
 				ds_list_add(CollsionEnemys,ds_list_find_value(_list,i));
 			}
 			instance_create_layer(x,y,"Player",obj_explosion2);
-			instance_destroy();
+			instance_destroy(self);
 		}
 	}
 	array_foreach(Enemys,_collider);
 	for(var i = 0;i < ds_list_size(CollsionEnemys);i++)
 	{
-		show_debug_message("{0}맟춤",ds_list_find_value(CollsionEnemys,i));
+		//충돌
+		var _instance = ds_list_find_value(CollsionEnemys,i);
+		show_debug_message("{0}맟춤",_instance);
 	}
 	
 	x += MoveForce[0];

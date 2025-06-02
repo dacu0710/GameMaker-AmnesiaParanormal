@@ -26,8 +26,10 @@ var _collider = function(_element, _index)
 array_foreach(Enemys,_collider);
 if(instance_exists(NearInstance))
 {
+	//충돌
 	var _dir = point_direction(x, y, NearInstance.x, NearInstance.y)
 	var _Move_Force = [lengthdir_x(BulletSpeed,_dir),lengthdir_y(BulletSpeed,_dir)]
 	image_angle = _dir-90;
-	MoveForce = _Move_Force;
+	MoveForce = _Move_Force
+	//NearInstance = 충돌 인스턴트
 }

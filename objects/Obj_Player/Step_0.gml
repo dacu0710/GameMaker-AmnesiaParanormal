@@ -31,6 +31,7 @@ var _collider = function(_element, _index)
 {
 	if(place_meeting(x,y,_element))
 	{
+		//충돌
 		var _instance = instance_nearest(x,y,_element);
 		if(variable_instance_exists(_instance,"Damage"))
 		{
