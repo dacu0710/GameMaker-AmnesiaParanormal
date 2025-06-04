@@ -1,6 +1,6 @@
 
 //밝기 총괄
-var Brights = [100,60,40,20,10];
+var Brights = [100,60,40,20,10,0];
 
 if(global.Sanity <= 100 and global.Sanity >= 90)
 {
@@ -41,6 +41,14 @@ if(global.Sanity < 10 and global.Sanity >= 1)
 		var Speed = 0.1;
 		global.Bright = lerp(global.Bright,Brights[4],Speed);
 	} else { global.BrightLevel = 5; }
+}
+if(global.Sanity <= 0)
+{
+	if(global.Bright != Brights[5])
+	{
+		var Speed = 0.05;
+		global.Bright = lerp(global.Bright,Brights[5],Speed);
+	} else { global.BrightLevel = 6; }
 }
 show_debug_message("{0},{1},{2}",global.Sanity,global.Bright,global.BrightLevel)
 

@@ -3,8 +3,14 @@ image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 MoveForce = [Horizontal/100,Vertical/100];
 if(room == R_Main)
 {
-	x += MoveForce[0];
-	y += MoveForce[1];
+	if(x+MoveForce[0]-PlayerSize[0]/2 > 0 and x+MoveForce[0]+PlayerSize[0]/2 < window_get_width()/3)
+	{
+		x += MoveForce[0];
+	}
+	if(y+MoveForce[1]-PlayerSize[1]/2  > 0 and y+MoveForce[1]+PlayerSize[1]/2  < window_get_height()/3)
+	{
+		y += MoveForce[1];
+	}
 }
 if(isDamaged)
 {
