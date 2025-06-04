@@ -78,6 +78,7 @@
     {"id":{"name":"Obj_shellWall","path":"objects/Obj_shellWall/Obj_shellWall.yy",},},
     {"id":{"name":"Obj_sphere","path":"objects/Obj_sphere/Obj_sphere.yy",},},
     {"id":{"name":"Obj_sun","path":"objects/Obj_sun/Obj_sun.yy",},},
+    {"id":{"name":"Spawn_Manager","path":"objects/Spawn_Manager/Spawn_Manager.yy",},},
     {"id":{"name":"UIManager","path":"objects/UIManager/UIManager.yy",},},
     {"id":{"name":"R_Main","path":"rooms/R_Main/R_Main.yy",},},
     {"id":{"name":"R_Title","path":"rooms/R_Title/R_Title.yy",},},
