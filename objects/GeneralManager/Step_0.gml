@@ -50,7 +50,7 @@ if(global.Sanity <= 0)
 		global.Bright = lerp(global.Bright,Brights[5],Speed);
 	} else { global.BrightLevel = 6; }
 }
-show_debug_message("{0},{1},{2}",global.Sanity,global.Bright,global.BrightLevel)
+//show_debug_message("{0},{1},{2}",global.Sanity,global.Bright,global.BrightLevel)
 
 if(keyboard_check_released(ord("1")))
 {
