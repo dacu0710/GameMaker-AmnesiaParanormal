@@ -3,6 +3,10 @@
   "%Name":"Obj_shellWall",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+<<<<<<< HEAD
+=======
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+>>>>>>> 0ab18ef6488be02991bc77ab18f328e08f8c8dd8
   ],
   "managed":true,
   "name":"Obj_shellWall",
