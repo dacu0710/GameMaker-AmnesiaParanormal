@@ -84,6 +84,7 @@
     {"id":{"name":"R_Title","path":"rooms/R_Title/R_Title.yy",},},
     {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
     {"id":{"name":"Spr_BaseBullet","path":"sprites/Spr_BaseBullet/Spr_BaseBullet.yy",},},
+    {"id":{"name":"Spr_CoolRate","path":"sprites/Spr_CoolRate/Spr_CoolRate.yy",},},
     {"id":{"name":"Spr_core","path":"sprites/Spr_core/Spr_core.yy",},},
     {"id":{"name":"Spr_cusp","path":"sprites/Spr_cusp/Spr_cusp.yy",},},
     {"id":{"name":"Spr_darkness","path":"sprites/Spr_darkness/Spr_darkness.yy",},},

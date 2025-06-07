@@ -9,8 +9,8 @@ weaponLevel = 1;
 
 shootLv1Cooltime = 10;
 Lv1BulletSize = 100;
-shootLv2Cooltime = 20;//유도
-shootLv3Cooltime = 20;//수류탄
+shootLv2Cooltime = 100;//유도
+shootLv3Cooltime = 100;//수류탄
 
 Enemys = [
 Obj_cusp,Obj_eyesore,Obj_injection,Obj_injection_thorn,
@@ -100,6 +100,7 @@ function PlayerKey(key)
 				instance_create_layer(x-PlayerSize[0],y,"Player",Obj_Guidedbullet);
 				instance_create_layer(x,y-PlayerSize[1],"Player",Obj_Guidedbullet);
 				alarm_set(1,shootLv2Cooltime);
+				UIManager.DrawSkillCoorLevel2Rate = shootLv2Cooltime;
 		}
 	}
 	if(keyboard_check(global.KeyBind.ShootLV3Key))
@@ -108,6 +109,7 @@ function PlayerKey(key)
 		{
 				instance_create_layer(x,y-PlayerSize[1],"Player",Obj_GrenadeBullet);
 				alarm_set(2,shootLv3Cooltime);
+				UIManager.DrawSkillCoorLevel3Rate = shootLv3Cooltime;
 		}
 	}
 	

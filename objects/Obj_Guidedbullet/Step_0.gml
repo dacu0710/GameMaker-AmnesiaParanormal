@@ -8,6 +8,7 @@ if(room == R_Main)
 		if(place_meeting(x+MoveForce[0],y+MoveForce[1],_element))
 		{
 			instance_destroy();
+			show_debug_message("{0}맟춤",_element.id);
 		}
 		
 		var _nearIns = instance_nearest(x,y,_element);
