@@ -2,7 +2,7 @@ var _UIColor = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 draw_set_colour(_UIColor);
 if(room = R_Main)
 {
-	if(isSanityRateUI)
+	if(isSanityRateUI && !KeyManager.isPause)
 	{
 		{
 			var _Scale = 1
@@ -18,7 +18,7 @@ if(room = R_Main)
 			draw_sprite_part_ext(Spr_SanityRate,0,0,0,DrawSanityRate,_SprSize[1],_SprPos[0],_SprPos[1],_Scale,_Scale,_UIColor,1);
 		}
 	}
-	if(isSkillCoolUI)
+	if(isSkillCoolUI && !KeyManager.isPause)
 	{
 		var _BrightLevelUISize = [sprite_get_width(Spr_DraknessLevel),sprite_get_height(Spr_DraknessLevel)];		
 		{//유도탄
@@ -48,7 +48,7 @@ if(room = R_Main)
 			draw_sprite_part_ext(Spr_CoolRate,0,0,0,_SprSize[0],DrawSkillCoorLevel3Rate,_SprPos[0],_SprPos[1],_Scale,-_Scale,_UIColor,1);
 		}
 	}
-	if(isBrightLevelUI)
+	if(isBrightLevelUI && !KeyManager.isPause)
 	{
 		var _Scale = 1;
 		var _SprSize = [sprite_get_width(Spr_DraknessLevel)*_Scale,sprite_get_height(Spr_DraknessLevel)*_Scale];

@@ -4,7 +4,7 @@ var Brights = [100,60,40,20,10,0];
 
 if(global.Sanity <= 100 and global.Sanity >= 90)
 {
-	if(global.Bright != Brights[0])
+	if(abs(global.Bright - Brights[0]) > 0.1)
 	{
 		var Speed = 0.1;
 		global.Bright = lerp(global.Bright,Brights[0],Speed);
@@ -12,7 +12,7 @@ if(global.Sanity <= 100 and global.Sanity >= 90)
 }
 if(global.Sanity < 90 and global.Sanity >= 60)
 {
-	if(global.Bright != Brights[1])
+	if(abs(global.Bright - Brights[1]) > 0.1)
 	{
 		var Speed = 0.1;
 		global.Bright = lerp(global.Bright,Brights[1],Speed);
@@ -20,7 +20,7 @@ if(global.Sanity < 90 and global.Sanity >= 60)
 }
 if(global.Sanity < 60 and global.Sanity >= 30)
 {
-	if(global.Bright != Brights[2])
+	if(abs(global.Bright - Brights[2]) > 0.1)
 	{
 		var Speed = 0.1;
 		global.Bright = lerp(global.Bright,Brights[2],Speed);
@@ -28,7 +28,7 @@ if(global.Sanity < 60 and global.Sanity >= 30)
 }
 if(global.Sanity < 30 and global.Sanity >= 10)
 {
-	if(global.Bright != Brights[3])
+	if(abs(global.Bright - Brights[3]) > 0.1)
 	{
 		var Speed = 0.1;
 		global.Bright = lerp(global.Bright,Brights[3],Speed);
@@ -36,7 +36,7 @@ if(global.Sanity < 30 and global.Sanity >= 10)
 }
 if(global.Sanity < 10 and global.Sanity >= 1)
 {
-	if(global.Bright != Brights[4])
+	if(abs(global.Bright - Brights[4]) > 0.1)
 	{
 		var Speed = 0.1;
 		global.Bright = lerp(global.Bright,Brights[4],Speed);
@@ -44,7 +44,7 @@ if(global.Sanity < 10 and global.Sanity >= 1)
 }
 if(global.Sanity <= 0)
 {
-	if(global.Bright != Brights[5])
+	if(abs(global.Bright - Brights[5] > 0.1))
 	{
 		var Speed = 0.05;
 		global.Bright = lerp(global.Bright,Brights[5],Speed);
