@@ -1,0 +1,1 @@
+move_towards_point(Obj_Player.x,Obj_Player.y,2);

@@ -1,44 +1,25 @@
-timer++
-if(timer >= 300 and p_test == 0)
+timer++;
+if(ch == 0 and timer >= timer_Max and  can_spawn)
 {
-	instance_create_layer(32,64,"Monster",Obj_injection);
-	instance_create_layer(224,64,"Monster",Obj_injection);
-	p_test++;
+	temp();
+	ch1monsterSpawn(monster_random_num);
 }
-if(timer >= 600 and p_test == 1)
+if(ch == 1 and timer >= timer_Max and  can_spawn)
 {
-	instance_create_layer(128,64,"Monster",Obj_injection);
-	p_test++;
+	temp();
+	ch2monsterSpawn(monster_random_num);
 }
-if(timer >= 750 and p_test == 2)
+if(ch == 2 and timer >= timer_Max and  can_spawn)
 {
-	switch(random_num_1)
-	{
-		case 0:
-			instance_create_layer(32,64,"Monster",Obj_cusp);
-			p_test++;
-			break;
-		case 1:
-			instance_create_layer(128,64,"Monster",Obj_cusp);
-			p_test++;
-			break;
-		case 2:
-			instance_create_layer(228,64,"Monster",Obj_cusp);
-			p_test++;
-			break;
-	}
+	temp();
+	ch3monsterSpawn(monster_random_num);
 }
-if(timer >= 960 and p_test == 3)
+if (!can_spawn && timer == 0)
 {
-	switch(random_num_2)
-	{
-		case 0:
-			instance_create_layer(32,64,"Monster",Obj_eyesore);
-			p_test++;
-			break;
-		case 1:
-			instance_create_layer(228,64,"Monster",Obj_eyesore);
-			p_test++;
-			break;
-	}
+    can_spawn = true;
+}
+if(p_test >= 5)
+{
+	ch++;
+	p_test = 0;
 }
