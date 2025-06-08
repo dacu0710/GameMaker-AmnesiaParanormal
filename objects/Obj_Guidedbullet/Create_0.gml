@@ -4,7 +4,7 @@ MoveForce = [0,-BulletSpeed];
 Enemys = [
 Obj_cusp,Obj_eyesore,Obj_injection,Obj_injection_thorn,
 Obj_core,Obj_darkness,Obj_meatWall,Obj_sphere,
-Obj_lightLay,Obj_shellFeather,Obj_shellWall,Obj_sun]
+Obj_lightLay,Obj_shellFeather,Obj_shellWall_left,Obj_sun]
 
 Damage = 10 + (100 - global.Sanity)/10;
 

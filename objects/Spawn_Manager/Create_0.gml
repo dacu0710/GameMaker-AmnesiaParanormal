@@ -2,8 +2,10 @@ randomize();
 timer = 0;
 timer_Max = 0;
 
+boss_spawn = 0;
+
 p_test = 0;
-ch = 2;
+ch = 0;
 
 random_num_1 = 0;
 random_num_2 = 0;
