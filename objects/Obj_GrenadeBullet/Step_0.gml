@@ -23,7 +23,11 @@ if(room == R_Main)
 	{
 		//충돌
 		var _instance = ds_list_find_value(CollsionEnemys,i);
-		show_debug_message("{0}맟춤",_instance);
+		if(!is_undefined(_instance.TakeDamage))
+		{
+			_instance.TakeDamage(Damage);
+		}
+		show_debug_message("{0}맟춤",_instance.id);
 	}
 	
 	x += MoveForce[0];

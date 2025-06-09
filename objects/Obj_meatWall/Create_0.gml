@@ -1,9 +1,14 @@
 Damage = 20;
+hp = 2;
+function TakeDamage(_Damage)
+{
+	return;
+}
 
 random_x = 0;
 random_y = 0;
 i = 0;
-hp = 2;
+
 
 random_x = random_range(0,256);
 
