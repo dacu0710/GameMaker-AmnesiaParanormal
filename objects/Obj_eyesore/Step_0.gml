@@ -3,11 +3,10 @@ direction = 270;
 
 if(y >= 448)
 {
-	for(i = 0;i<8;i++)
+	for(var i = 0;i<8;i++)
 	{
-		var t = instance_create_layer(x,y,"Monster",Obj_eye_thorn);
-		t.i = i;
+		var t = instance_create_layer(x,y,"Monster",Obj_thorn);
+		t.direction = i*45
 	}
-	i = 0;
 	instance_destroy();
 }

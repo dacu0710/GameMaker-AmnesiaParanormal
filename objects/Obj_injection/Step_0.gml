@@ -4,9 +4,10 @@ timer++;
 
 if(timer >= 20)
 {
-	for(i = 0;i<3;i++)
+	for(i = -1;i<2;i++)
 	{
-		instance_create_layer(x,y,"Monster",Obj_injection_thorn);
+		var _thorn = instance_create_layer(x+i*20,y,"Monster",Obj_thorn);
+		_thorn.direction = point_direction(x,y,Obj_Player.x,Obj_Player.y);
 	}
 	timer = 0;
 }

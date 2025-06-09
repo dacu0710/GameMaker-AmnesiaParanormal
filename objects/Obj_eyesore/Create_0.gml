@@ -4,5 +4,3 @@ function TakeDamage(_Damage)
 {
 	hp -= _Damage;
 }
-
-i = 0;

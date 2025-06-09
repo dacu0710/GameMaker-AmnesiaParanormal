@@ -7,13 +7,14 @@ PlayerDeltaSpeed = PlayerMaxSpeed*6;
 
 weaponLevel = 1;
 
+
 shootLv1Cooltime = 10;
 Lv1BulletSize = 100;
 shootLv2Cooltime = 100;//유도
 shootLv3Cooltime = 100;//수류탄
 
 Enemys = [
-Obj_cusp,Obj_eyesore,Obj_injection,Obj_injection_thorn,
+Obj_cusp,Obj_eyesore,Obj_injection,Obj_thorn,
 Obj_core,Obj_darkness,Obj_meatWall,Obj_sphere,
 Obj_lightLay,Obj_shellFeather,Obj_shellWall_left,Obj_sun]
 isDamaged = false;
@@ -94,7 +95,7 @@ function PlayerKey(key)
 	}
 	if(keyboard_check(global.KeyBind.ShootLV2Key))
 	{
-		if(alarm_get(1) == -1 and weaponLevel >= 1)//임시
+		if(alarm_get(1) == -1 and weaponLevel >= 2)//임시
 		{
 				instance_create_layer(x+PlayerSize[0],y,"Player",Obj_Guidedbullet);
 				instance_create_layer(x-PlayerSize[0],y,"Player",Obj_Guidedbullet);
@@ -105,7 +106,7 @@ function PlayerKey(key)
 	}
 	if(keyboard_check(global.KeyBind.ShootLV3Key))
 	{
-		if(alarm_get(2) == -1 and weaponLevel >= 1)
+		if(alarm_get(2) == -1 and weaponLevel >= 3)
 		{
 				instance_create_layer(x,y-PlayerSize[1],"Player",Obj_GrenadeBullet);
 				alarm_set(2,shootLv3Cooltime);
