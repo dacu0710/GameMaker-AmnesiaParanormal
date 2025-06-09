@@ -16,7 +16,7 @@ shootLv3Cooltime = 100;//수류탄
 Enemys = [
 Obj_cusp,Obj_eyesore,Obj_injection,Obj_thorn,
 Obj_core,Obj_darkness,Obj_meatWall,Obj_sphere,
-Obj_lightLay,Obj_shellFeather,Obj_shellWall_left,Obj_sun]
+Obj_lightLay,Obj_shellFeather,Obj_shellWall_left,Obj_shellWall_right,Obj_sun]
 isDamaged = false;
 flash_timer = 0;
 flash_speed = 5;
@@ -135,6 +135,7 @@ function addForce(_ForceVec)
 {
 	if(array_length(_ForceVec) == 2)
 	{
-		MoveForce = _ForceVec;
+		Vertical += _ForceVec[1]*100;
+		Horizontal += _ForceVec[0]*100;
 	}
 }
