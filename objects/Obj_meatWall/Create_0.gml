@@ -1,5 +1,6 @@
 Damage = 20;
 hp = 2;
+col_hp = 2;
 function TakeDamage(_Damage)
 {
 	return;

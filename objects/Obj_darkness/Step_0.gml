@@ -10,4 +10,7 @@ if(timer >= 60)
 	global.Sanity -= 1;
 	timer = 0;
 }
-if(y > 448) instance_destroy();
+if(y > 448 or hp <= 0) {
+	image_alpha -= 0.05;
+	if(image_alpha<=0) instance_destroy();
+}

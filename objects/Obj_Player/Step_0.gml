@@ -5,11 +5,11 @@ weaponLevel = Spawn_Manager.ch+1
 MoveForce = [Horizontal/100,Vertical/100];
 if(room == R_Main)
 {
-	if(x+MoveForce[0]-PlayerSize[0]/2 > 0 and x+MoveForce[0]+PlayerSize[0]/2 < window_get_width()/3)
+	if(x+MoveForce[0]-PlayerSize[0]/2 > 0 and x+MoveForce[0]+PlayerSize[0]/2 < display_get_gui_width()/3)
 	{
 		x += MoveForce[0];
 	}
-	if(y+MoveForce[1]-PlayerSize[1]/2  > 0 and y+MoveForce[1]+PlayerSize[1]/2  < window_get_height()/3)
+	if(y+MoveForce[1]-PlayerSize[1]/2  > 0 and y+MoveForce[1]+PlayerSize[1]/2  < display_get_gui_height()/3)
 	{
 		y += MoveForce[1];
 	}
@@ -47,6 +47,14 @@ var _collider = function(_element, _index)
 			if(_instance.object_index == Obj_cusp)
 			{
 				instance_destroy(_instance);
+			}
+			if(_instance.object_index == Obj_shellWall_left)
+			{
+				addForce([1,0]);
+			}
+			if(_instance.object_index == Obj_shellWall_right)
+			{
+				addForce([-1,0]);
 			}
 		}
 		show_debug_message("{0} 부딧침  : {1}",_instance,_instance.object_index);

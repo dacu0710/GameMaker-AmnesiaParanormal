@@ -7,12 +7,29 @@ if(timer >= 180)
 var current_step = floor(hp / 10);
 
 if ((current_step != 6) and current_step < last_trigger_step) {
-	instance_create_layer(x,y,"Core",Obj_lightLay);
-	mode++;
-	//show_debug_log(mode);
+	randomize();
+	random_num = random_range(32,224)
+	instance_create_layer(random_num,224,"Right",Obj_lightLay);
+	if(mode < 3) mode++;
     last_trigger_step = current_step;
 }
 if(hp <= 0)
 {
-	instance_destroy();
+	end_timer++;
+	if(end_timer >= 60)
+	{
+		game_end()
+		instance_destroy();
+	}
+}
+if(is_damage)
+{
+	damage_timer ++;
+	image_blend = c_red;
+	if(timer >= 30) 
+	{
+		is_damage = 0;
+		timer = 0;
+		image_blend = c_white;
+	}
 }
