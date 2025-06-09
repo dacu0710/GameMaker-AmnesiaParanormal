@@ -1,4 +1,5 @@
 var _UIColor = make_color_hsv(0,0,global.Bright*(255/100));//밝기
+screen = [display_get_gui_width(),display_get_gui_height()]
 draw_set_colour(_UIColor);
 if(room = R_Main)
 {

@@ -49,7 +49,7 @@ var _collider = function(_element, _index)
 				instance_destroy(_instance)
 			}
 		}
-		show_debug_message("{0} 부딧침",_instance);
+		show_debug_message("{0} 부딧침  : {1}",_instance,_instance.object_index);
 	}
 	
 }
