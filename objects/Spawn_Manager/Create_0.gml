@@ -6,7 +6,7 @@ boss_spawn = 0;
 meat_wall_spawn = 0;
 
 p_test = 0;
-ch = 0;
+ch = 3;
 
 random_num_1 = 0;
 random_num_2 = 0;

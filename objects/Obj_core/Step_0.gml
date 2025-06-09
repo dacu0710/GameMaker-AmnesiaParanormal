@@ -9,7 +9,7 @@ if(hp <= 0)
 if(y > 448) instance_destroy();
 if(is_damage)
 {
-	damage_timer ++;
+	timer ++;
 	image_blend = c_red;
 	if(timer >= 30) 
 	{
