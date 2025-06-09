@@ -10,3 +10,4 @@ if(timer >= 60)
 	global.Sanity -= 1;
 	timer = 0;
 }
+if(y > 448) instance_destroy();

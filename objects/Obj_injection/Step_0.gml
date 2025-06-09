@@ -11,3 +11,4 @@ if(timer >= 20)
 	}
 	timer = 0;
 }
+if(y > 448) instance_destroy();

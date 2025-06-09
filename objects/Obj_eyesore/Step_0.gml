@@ -10,3 +10,4 @@ if(y >= 448)
 	}
 	instance_destroy();
 }
+if(y > 448) instance_destroy();

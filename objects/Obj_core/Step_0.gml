@@ -5,3 +5,4 @@ if(hp <= 0)
 	Obj_meatWall.hp--;
 	instance_destroy();
 }
+if(y > 448) instance_destroy();

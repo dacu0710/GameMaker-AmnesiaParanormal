@@ -3,6 +3,7 @@ timer = 0;
 timer_Max = 0;
 
 boss_spawn = 0;
+meat_wall_spawn = 0;
 
 p_test = 0;
 ch = 0;
@@ -52,6 +53,7 @@ function ch1monsterSpawn(random_number)
 function ch2monsterSpawn(random_number)
 {
 	randomize();
+	if(random_number == 1) meat_wall_spawn = 1;
     var pattern = ch2_spawn_patterns[random_number - 1];
     var spawn_positions;
     if (variable_struct_exists(pattern, "positions_func")) spawn_positions = pattern.positions_func();
@@ -73,6 +75,10 @@ function temp()
 {
 	randomize();
 	monster_random_num = irandom_range(1,5);
+	if(meat_wall_spawn == 1 && monster_random_num == 1) {
+		monster_random_num = irandom_range(2,5);
+		return;
+	}
 	show_debug_message("monsterSpwan");
 	p_test++;
 	timer = 0;

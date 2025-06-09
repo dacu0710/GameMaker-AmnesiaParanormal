@@ -11,7 +11,7 @@ if(room == R_Main)
 			{
 				_element.TakeDamage(Damage);
 			}
-			show_debug_message("{0}맟춤",_element.id);
+			//show_debug_message("{0}맟춤",_element.id);
 			instance_destroy();
 		}
 	}
