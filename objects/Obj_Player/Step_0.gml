@@ -48,16 +48,16 @@ var _collider = function(_element, _index)
 			{
 				instance_destroy(_instance);
 			}
-			if(_instance.object_index == Obj_shellWall_left)
+			else if(_instance.object_index == Obj_shellWall_left)
 			{
 				addForce([1,0]);
 			}
-			if(_instance.object_index == Obj_shellWall_right)
+			else if(_instance.object_index == Obj_shellWall_right)
 			{
 				addForce([-1,0]);
 			}
 		}
-		show_debug_message("{0} 부딧침  : {1}",_instance,_instance.object_index);
+		//show_debug_message("{0} 부딧침  : {1}",_instance,_instance.object_index);
 	}
 	
 }
