@@ -2,9 +2,11 @@ speed = 2;
 direction = 270;
 if(hp <= 0)
 {
-	Obj_meatWall.hp--;
 	image_alpha -= 0.05;
-	if(image_alpha<=0) instance_destroy();
+	if(image_alpha<=0) {
+		Obj_meatWall.hp--;
+		instance_destroy();
+	}
 }
 if(y > 448) instance_destroy();
 if(is_damage)

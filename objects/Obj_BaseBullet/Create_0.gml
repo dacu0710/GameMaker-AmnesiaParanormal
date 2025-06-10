@@ -4,7 +4,7 @@ image_xscale = (Obj_Player.Lv1BulletSize/100) * image_xscale;
 image_yscale = (Obj_Player.Lv1BulletSize/100) * image_yscale;
 Enemys = [
 Obj_cusp,Obj_eyesore,Obj_injection,
-Obj_core,Obj_darkness,Obj_sphere,
+Obj_darkness,Obj_sphere,
 Obj_sun]
 
-Damage = 5;
+Damage = 10;
