@@ -1,6 +1,6 @@
 speed = 2;
 direction = 270;
-if(hp <= 0)
+if(hp <= 0 or Obj_meatWall.col_hp <= 0)
 {
 	image_alpha -= 0.05;
 	if(image_alpha<=0) {

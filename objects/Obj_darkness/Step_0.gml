@@ -1,9 +1,10 @@
 speed = 4;
 direction = 270;
 timer++;
-if(y >= 448)
+if(y >= 448 and check == 0)
 {
 	global.Sanity -= 10;
+	check++;
 }
 if(timer >= 60)
 {

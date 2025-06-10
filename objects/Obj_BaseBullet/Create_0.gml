@@ -7,4 +7,4 @@ Obj_cusp,Obj_eyesore,Obj_injection,
 Obj_darkness,Obj_sphere,
 Obj_sun]
 
-Damage = 10;
+Damage = 5;
