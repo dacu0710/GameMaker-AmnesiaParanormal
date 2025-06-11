@@ -1,3 +1,5 @@
+if(instance_exists(Spawn_Manager)) CurrnentCh = Spawn_Manager.ch
+
 switch(global.BrightLevel)
 {
 	case 1:

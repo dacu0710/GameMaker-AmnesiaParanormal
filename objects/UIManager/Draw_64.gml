@@ -3,7 +3,7 @@ screen = [display_get_gui_width(),display_get_gui_height()]
 draw_set_colour(_UIColor);
 if(room = R_Main)
 {
-	if(isSanityRateUI && !KeyManager.isPause)
+	if(isSanityRateUI && !KeyManager.isPause)//정신력 바
 	{
 		{
 			var _Scale = 1
@@ -19,7 +19,7 @@ if(room = R_Main)
 			draw_sprite_part_ext(Spr_SanityRate,0,0,0,DrawSanityRate,_SprSize[1],_SprPos[0],_SprPos[1],_Scale,_Scale,_UIColor,1);
 		}
 	}
-	if(isSkillCoolUI && !KeyManager.isPause)
+	if(isSkillCoolUI && !KeyManager.isPause)//스킬 쿨타임 아이콘
 	{
 		var _BrightLevelUISize = [sprite_get_width(Spr_DraknessLevel),sprite_get_height(Spr_DraknessLevel)];		
 		{//유도탄
@@ -49,7 +49,7 @@ if(room = R_Main)
 			draw_sprite_part_ext(Spr_CoolRate,0,0,0,_SprSize[0],DrawSkillCoorLevel3Rate,_SprPos[0],_SprPos[1],_Scale,-_Scale,_UIColor,1);
 		}
 	}
-	if(isBrightLevelUI && !KeyManager.isPause)
+	if(isBrightLevelUI && !KeyManager.isPause)//밝기 숫자 표시
 	{
 		var _Scale = 1;
 		var _SprSize = [sprite_get_width(Spr_DraknessLevel)*_Scale,sprite_get_height(Spr_DraknessLevel)*_Scale];
@@ -58,4 +58,5 @@ if(room = R_Main)
 		var _TextSize = [string_width(string(global.BrightLevel))*3,string_height(string(global.BrightLevel))*3]
 		draw_text_transformed((_SprPos[0]*2+_SprSize[0]-_TextSize[0])/2,(_SprPos[1]*2+_SprSize[1]-_TextSize[1])/2,string(global.BrightLevel),3,3,0);
 	}
+	
 }
