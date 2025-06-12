@@ -9,13 +9,14 @@ weaponLevel = 1;
 
 
 shootLv1Cooltime = 10;
+shootLv1SizeTimer = 0;
 Lv1BulletSize = 100;
 shootLv2Cooltime = 100;//유도
 shootLv3Cooltime = 100;//수류탄
 
 Enemys = [
 Obj_cusp,Obj_eyesore,Obj_injection,Obj_thorn,
-Obj_core,Obj_darkness,Obj_meatWall,Obj_sphere,
+Obj_darkness,Obj_meatWall,Obj_sphere,
 Obj_lightLay,Obj_shellFeather,Obj_shellWall_left,Obj_shellWall_right,Obj_sun]
 isDamaged = false;
 flash_timer = 0;
@@ -87,10 +88,11 @@ function PlayerKey(key)
 	} 
 	else 
 	{
-		if(alarm_get(0) == -1 and weaponLevel >= 1)
+		shootLv1SizeTimer++;
+		if(shootLv1SizeTimer == shootLv1Cooltime)
 		{
 			Lv1BulletSize = min(100,Lv1BulletSize + 10);
-			alarm_set(0,shootLv1Cooltime);
+			shootLv1SizeTimer = 0;
 		}
 	}
 	if(keyboard_check(global.KeyBind.ShootLV2Key))

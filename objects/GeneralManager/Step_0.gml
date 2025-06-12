@@ -51,7 +51,7 @@ if(global.Sanity <= 0)
 	} else { global.BrightLevel = 6; }
 }
 //show_debug_message("{0},{1},{2}",global.Sanity,global.Bright,global.BrightLevel)
-
+/*
 if(keyboard_check_released(ord("1")))
 {
 	global.Sanity += 5;
@@ -63,4 +63,4 @@ if(keyboard_check_released(ord("2")))
 if(keyboard_check_released(ord("3")))
 {
 	Obj_Player.isDamaged = true;
-}
+} */

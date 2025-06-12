@@ -1,5 +1,6 @@
 speed = 2;
 direction = 270;
+image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 if(hp<=0 or col_hp <= 0)
 {
 	image_alpha -= 0.05;

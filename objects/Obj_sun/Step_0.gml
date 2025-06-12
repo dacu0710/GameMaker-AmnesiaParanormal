@@ -1,3 +1,4 @@
+image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 timer++;
 if(timer >= 180)
 {
@@ -18,18 +19,25 @@ if(hp <= 0)
 	end_timer++;
 	if(end_timer >= 60)
 	{
-		game_end()
-		instance_destroy();
+		GameManager.CurrnentScore += 30;
+		global.Score = max(global.Score,GameManager.CurrnentScore);
+		global.EndMessage = "Victory!"
+		room_goto(R_End);
 	}
 }
 if(is_damage)
 {
 	damage_timer ++;
-	image_blend = c_red;
-	if(timer >= 30) 
+	if(damage_timer >= 30) 
 	{
 		is_damage = 0;
-		timer = 0;
-		image_blend = c_white;
+		damage_timer = 0;
 	}
+	flash_timer++;
+
+    if (flash_timer >= flash_speed)
+    {
+        isWhite = !isWhite;
+        flash_timer = 0;
+    }
 }

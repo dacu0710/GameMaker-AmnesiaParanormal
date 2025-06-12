@@ -1,4 +1,5 @@
 image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
+Damage = 10 + (100 - global.Sanity)/10;
 
 if(room == R_Main)
 {
@@ -7,11 +8,21 @@ if(room == R_Main)
 	{
 		if(place_meeting(x+MoveForce[0],y+MoveForce[1],_element))
 		{
-			if(!is_undefined(_element.TakeDamage))
+			var _instance = instance_nearest(x,y,_element);
+			if(!is_undefined(_instance.TakeDamage))
 			{
-				_element.TakeDamage(Damage);
+				if(_instance.hp < Damage and _instance.hp > 0)
+				{
+					//show_debug_message("{0},{1}",_instance.hp , Damage)
+					instance_create_layer(x+Obj_Player.PlayerSize[0],y,"Player",Obj_Guidedbullet);
+					instance_create_layer(x-Obj_Player.PlayerSize[0],y,"Player",Obj_Guidedbullet);
+					instance_create_layer(x,y-Obj_Player.PlayerSize[1],"Player",Obj_Guidedbullet);
+					Obj_Player.alarm[1] = Obj_Player.shootLv2Cooltime;
+					UIManager.DrawSkillCoorLevel2Rate = Obj_Player.shootLv2Cooltime;
+				}
+				_instance.TakeDamage(Damage);
 			}
-			show_debug_message("{0}맟춤",_element.id);
+			//show_debug_message("{0}맟춤",_instance);
 			instance_destroy();
 		}
 		

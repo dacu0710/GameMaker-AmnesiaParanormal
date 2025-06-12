@@ -16,10 +16,23 @@ global.KeyBind =
 }
 
 global.Sanity = 100;
+global.SanityRecovery = 5;
 global.Bright = 100;
 global.BrightLevel = 1;
-
 global.isPause = false;
+
+if ( !variable_global_exists("LogoSpriteSubmit") )
+{
+	global.LogoSpriteSubmit = 0;
+}
+if (!variable_global_exists("Score"))
+{
+	global.Score = 0;
+}
+if (!variable_global_exists("EndMessage"))
+{
+	global.EndMessage = "";
+}
 
 randomize();
 

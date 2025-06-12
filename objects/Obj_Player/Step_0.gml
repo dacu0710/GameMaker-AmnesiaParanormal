@@ -43,19 +43,33 @@ var _collider = function(_element, _index)
 		var _instance = instance_nearest(x,y,_element);
 		if(variable_instance_exists(_instance,"Damage"))
 		{
-			TakeDamage(_instance.Damage);
+			if(_instance.object_index == Obj_shellWall_left)//왼쪽벽과 충돌
+			{
+				addForce([1,0]);
+			}
+			else if(_instance.object_index == Obj_shellWall_right)//오른쪽벽과 충돌
+			{
+				addForce([-1,0]);
+			}
+			else if(_instance.object_index == Obj_meatWall)//고기벽과 충돌
+			{
+				addForce([0,1]);
+				if(variable_instance_exists(_instance.id, "col_hp") and !isDamaged)
+				{
+					_instance.col_hp--;
+				}
+			}
+			
+			if(instance_exists(_instance))
+			{
+				TakeDamage(_instance.Damage);
+			}
+			
 			if(_instance.object_index == Obj_cusp)
 			{
 				instance_destroy(_instance);
 			}
-			else if(_instance.object_index == Obj_shellWall_left)
-			{
-				addForce([1,0]);
-			}
-			else if(_instance.object_index == Obj_shellWall_right)
-			{
-				addForce([-1,0]);
-			}
+
 		}
 		//show_debug_message("{0} 부딧침  : {1}",_instance,_instance.object_index);
 	}

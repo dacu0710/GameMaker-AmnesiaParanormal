@@ -1,2 +1,2 @@
-hp -= 5;
-is_damage = 1;
+//hp -= 5;
+//is_damage = 1;

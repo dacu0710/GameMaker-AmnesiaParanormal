@@ -1,15 +1,15 @@
 BulletSpeed = 8;
-
+image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 MoveForce = [0,-BulletSpeed];
 Enemys = [
 Obj_cusp,Obj_eyesore,Obj_injection,
-Obj_darkness,Obj_sphere,
+Obj_darkness,Obj_sphere,Obj_core,
 Obj_sun]
 
-Damage = 10 + (100 - global.Sanity)/10;
+Damage = 10;
 
 NearDistance = infinity;
-NearInstance = self.id;
+NearInstance = noone;
 
 var _collider = function(_element, _index)
 {
