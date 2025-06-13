@@ -2,7 +2,6 @@ global.step = 0;
 
 global.KeyBind = 
 {
-	StartKey : vk_space,
 	PlayerUPKey : vk_up,
 	PlayerDownKey : vk_down,
 	PlayerLeftKey : vk_left,

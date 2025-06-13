@@ -12,6 +12,7 @@ is_damage = 0;
 flash_timer = 0;
 flash_speed = 5
 isWhite = false;
+image_alpha = 1
 function TakeDamage(_Damage)
 {
 	hp -= _Damage;

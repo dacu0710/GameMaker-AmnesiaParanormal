@@ -8,9 +8,9 @@ if(global.Sanity <= 0) //GameOver
 		room_goto(R_End);
 	}
 }
-if(instance_exists(Spawn_Manager)) //Chapter 변경 표시
+if(instance_exists(Spawn_Manager) and instance_exists(FadeManager)) //Chapter 변경 표시
 {
-
+	
 	if(OldCh != CurrnentCh and room == R_Main and Spawn_Manager.ch <= 2)
 	{
 		var _BlinkTime = room_speed*2
@@ -20,6 +20,7 @@ if(instance_exists(Spawn_Manager)) //Chapter 변경 표시
 		draw_text((RoomSize[0]-_TextSize[0])/2,(RoomSize[0]-_TextSize[1])/2,_Text);
 		if(alarm_get(0) == -1)
 		{
+			FadeManager.fade_mode = "out";
 			alarm_set(0,_BlinkTime);
 		}
 	}

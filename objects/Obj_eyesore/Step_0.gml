@@ -1,6 +1,7 @@
 speed = 1.5;
 direction = 270;
 image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
+draw_set_alpha(1);
 if(y >= 448)
 {
 	for(var i = 0;i<8;i++)

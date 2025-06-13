@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"Spr_ObjectTileSet",
   "bboxMode":0,
-  "bbox_bottom":108,
+  "bbox_bottom":95,
   "bbox_left":2,
-  "bbox_right":175,
+  "bbox_right":159,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -14,8 +14,8 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"d4a6b1ad-208a-4819-9204-cebb6f2697b5","name":"d4a6b1ad-208a-4819-9204-cebb6f2697b5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":32,
+  "gridY":32,
   "height":112,
   "HTile":false,
   "layers":[

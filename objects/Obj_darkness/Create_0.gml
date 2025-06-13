@@ -1,3 +1,4 @@
+image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 Damage = 10;
 hp = 15;
 is_damage = 0;

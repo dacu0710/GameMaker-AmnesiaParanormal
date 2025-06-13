@@ -3,7 +3,7 @@ image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 MoveForce = [0,-BulletSpeed];
 Enemys = [
 Obj_cusp,Obj_eyesore,Obj_injection,
-Obj_darkness,Obj_sphere,Obj_core,
+Obj_darkness,Obj_core,
 Obj_sun]
 
 Damage = 10;

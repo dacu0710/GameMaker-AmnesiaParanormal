@@ -1,4 +1,4 @@
-speed = 2;
+speed = 0.5;
 direction = 270;
 image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 if(instance_exists(Obj_meatWall))

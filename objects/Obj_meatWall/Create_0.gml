@@ -1,6 +1,8 @@
 Damage = 20;
 hp = 2;
 col_hp = 2;
+image_alpha = 1;
+image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 function TakeDamage(_Damage)
 {
 	return;

@@ -27,7 +27,7 @@ if (!can_spawn && timer == 0)
 {
     can_spawn = true;
 }
-if(p_test >= 5)
+if(p_test >= 10)
 {
 	ch++;
 	p_test = 0;

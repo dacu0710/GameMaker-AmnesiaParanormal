@@ -19,24 +19,24 @@ monster_random_num = irandom_range(1,5);
  can_spawn = true;
 
 ch1_spawn_patterns = [
-    { monster_index: 2, positions: [32, 224],        timer: 480 }, // pattern 1
-    { monster_index: 2, positions: [128],            timer: 480 }, // pattern 2
-    { monster_index: 1, positions: [128],            timer: 180 }, // pattern 3
-    { monster_index: 0, positions_func: function() { return [96 * irandom_range(0, 2) + 32]; }, timer: 360 }, // pattern 4
-    { monster_index: 1, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; }, timer: 300 }  // pattern 5
+    { monster_index: 2, positions: [32, 224],        timer: 480/2 }, // pattern 1
+    { monster_index: 2, positions: [128],            timer: 480/2 }, // pattern 2
+    { monster_index: 1, positions: [128],            timer: 180/2 }, // pattern 3
+    { monster_index: 0, positions_func: function() { return [96 * irandom_range(0, 2) + 32]; }, timer: 360/2 }, // pattern 4
+    { monster_index: 1, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; }, timer: 300/2 }  // pattern 5
 ];
 ch2_spawn_patterns = [
-    { monster_index: 3, positions: [128],        timer: 120 }, // pattern 1
-    { monster_index: 0, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; },timer: 360 }, // pattern 2
-    { monster_index: 1, positions: [128],        timer: 480 }, // pattern 3
-    { monster_index: 2, positions_func: function() { return [96 * irandom_range(0, 2) + 32]; }, timer: 180 }, // pattern 4
-    { monster_index: 4, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; }, timer: 180 }  // pattern 5
+    { monster_index: 3, positions: [128],        timer: 120/2 }, // pattern 1
+    { monster_index: 0, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; },timer: 360/2 }, // pattern 2
+    { monster_index: 1, positions: [128],        timer: 480/2 }, // pattern 3
+    { monster_index: 2, positions_func: function() { return [96 * irandom_range(0, 2) + 32]; }, timer: 180/2 }, // pattern 4
+    { monster_index: 4, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; }, timer: 180/2 }  // pattern 5
 ];
 ch3_spawn_patterns = [
-    { monster_index: 0, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; },timer: 480 }, // pattern 1
-    { monster_index: 1, positions: [128],timer: 180 }, // pattern 2
-    { monster_index: 0, positions: [128],timer: 360 }, // pattern 3
-    { monster_index: 2, positions_func: function() { return [96 * irandom_range(0, 2) + 32]; }, timer: 360 }, // pattern 4
+    { monster_index: 0, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; },timer: 480/2 }, // pattern 1
+    { monster_index: 1, positions: [128],timer: 180/2 }, // pattern 2
+    { monster_index: 0, positions: [128],timer: 360/2 }, // pattern 3
+    { monster_index: 2, positions_func: function() { return [96 * irandom_range(0, 2) + 32]; }, timer: 360/2 }, // pattern 4
     { monster_index: 3, positions_func: function() { return [192 * irandom_range(0, 1) + 32]; }, timer: 180 }  // pattern 5
 ];
 

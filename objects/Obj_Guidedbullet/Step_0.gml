@@ -1,6 +1,6 @@
 image_blend = make_color_hsv(0,0,global.Bright*(255/100));//밝기
 Damage = 10 + (100 - global.Sanity)/10;
-
+draw_set_alpha(1);
 if(room == R_Main)
 {
 	

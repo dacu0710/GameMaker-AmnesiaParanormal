@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"UIManager",
+  "%Name":"TileLight",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"UIManager",
+  "name":"TileLight",
   "overriddenProperties":[],
   "parent":{
-    "name":"Manager",
-    "path":"folders/오브젝트/Manager.yy",
+    "name":"Player",
+    "path":"folders/오브젝트/Object/Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

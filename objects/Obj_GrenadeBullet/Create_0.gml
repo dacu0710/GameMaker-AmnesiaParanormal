@@ -1,7 +1,7 @@
 MoveForce = [0,-8];
 Enemys = [
 Obj_cusp,Obj_eyesore,Obj_injection,
-Obj_darkness,Obj_sphere,Obj_core,
+Obj_darkness,Obj_core,
 Obj_sun]
 CollsionEnemys = ds_list_create();
 

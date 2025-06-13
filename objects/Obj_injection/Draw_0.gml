@@ -10,3 +10,4 @@ else
 	gpu_set_fog(false,c_black,0,0);
 	draw_self();
 }
+draw_set_alpha(1);

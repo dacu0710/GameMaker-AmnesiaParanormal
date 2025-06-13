@@ -1,4 +1,5 @@
 screen = [256,448]
+draw_set_alpha(1);
 if (room == R_Title)
 {
 	{
@@ -8,6 +9,7 @@ if (room == R_Title)
 		} else {
 			draw_set_colour(make_color_rgb(255, 255, 255));
 		}
+		draw_set_font(font);
 		draw_text((screen[0]-string_width(StartText))/2,screen[1]/2-string_height(StartText),StartText);
 	}
 	{
@@ -17,6 +19,7 @@ if (room == R_Title)
 		} else {
 			draw_set_colour(make_color_rgb(255, 255, 255));
 		}
+		draw_set_font(font);
 		draw_text((screen[0]-string_width(KeyConfirmText))/2,screen[1]/2+string_height(KeyConfirmText)*1,KeyConfirmText);
 	}
 	{
@@ -26,16 +29,19 @@ if (room == R_Title)
 		} else {
 			draw_set_colour(make_color_rgb(255, 255, 255));
 		}
+		draw_set_font(font);
 		draw_text((screen[0]-string_width(QuickText))/2,screen[1]/2+string_height(QuickText)*3,QuickText);
 	}
 	{
 		var GuideText = "[PUSH ENTER BUTTON TO SELECT]"
 		draw_set_colour(make_color_rgb(255, 255, 255));
+		draw_set_font(font);
 		draw_text((screen[0]-string_width(GuideText))/2,screen[1]/2+string_height(GuideText)*6,GuideText);
 	}
 	{
 		var ScoreText = "High Score : "+string(global.Score);
 		draw_set_colour(make_color_rgb(255, 255, 255));
+		draw_set_font(font);
 		draw_text(0,screen[1]-string_height(ScoreText),ScoreText);
 	}
 }

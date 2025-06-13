@@ -1,3 +1,4 @@
+draw_set_alpha(1);
 if(isWhite)
 {
 	image_blend = make_color_hsv(0,0,255);
@@ -7,6 +8,7 @@ if(isWhite)
 } 
 else 
 {
+	image_blend = make_color_hsv(0,0,global.Bright*(255/100));
 	gpu_set_fog(false,c_black,0,0);
 	draw_sprite(Spr_sun,mode,128,32);
 }
